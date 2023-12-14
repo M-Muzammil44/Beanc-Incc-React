@@ -55,13 +55,11 @@ export default function PastWork() {
 
         <style jsx>{`
           button {
-            button {
-              background-color: transparent;
-              border: none;
-              color: white;
-              cursor: pointer;
-              margin-left: 10px;
-            }
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
           }
           body {
             font-family: 'Roboto Condensed', sans-serif;
@@ -108,6 +106,17 @@ export default function PastWork() {
             position: fixed;
             bottom: 0;
             width: 100%;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          footer p{
+            margin-right:650px;
+          }
+          
+          Link {
+            text-decoration: none;
           }
         `}</style>
       </html>

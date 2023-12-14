@@ -2,56 +2,54 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Services() {
-    return (
-      <>
-        <html lang="en">
-          <head>
-            <meta charSet="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Our Services</title>
-          </head>
-          <body>
-            
-            <header>
-              <h1>Our Services</h1>
-            </header>
-  
-            <div className="container">
-              <div className="service">
-                <h2>Service 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
-              </div>
-  
-              <div className="service">
-                <h2>Service 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
-              </div>
-  
-              <div className="service">
-                <h2>Service 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
-              </div>
+  return (
+    <>
+      <html lang="en">
+        <head>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Our Services</title>
+        </head>
+        <body>
+
+          <header>
+            <h1>Our Services</h1>
+          </header>
+
+          <div className="container">
+            <div className="service">
+              <h2>Service 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
             </div>
 
-            <footer>
-              <Link to="/Main">
-                <button>Home</button>
-              </Link>
-              <p>&copy; 2023 BeancIncc. </p>
-            </footer>
-  
-          </body>
-  
-          <style jsx>{`
-            button {
-              button {
-                background-color: transparent;
-                border: none;
-                color: white;
-                cursor: pointer;
-                margin-left: 10px;
-              }
-            }
+            <div className="service">
+              <h2>Service 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
+            </div>
+
+            <div className="service">
+              <h2>Service 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, felis id imperdiet congue, leo metus volutpat justo.</p>
+            </div>
+          </div>
+
+          <footer>
+            <Link to="/Main">
+              <button>Home</button>
+            </Link>
+            <p>&copy; 2023 BeancIncc. </p>
+          </footer>
+
+        </body>
+
+        <style jsx>{`
+          footer button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+          }
             body {
               font-family: Arial, sans-serif;
               background-image: url('assets/background_cut.png');
@@ -104,10 +102,20 @@ export default function Services() {
               position: fixed;
               bottom: 0;
               width: 100%;
+              color: #fff;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            footer p{
+              margin-right:650px;
+            }
+            
+            Link {
+              text-decoration: none;
             }
           `}</style>
-        </html>
-      </>
-    );
-  }
-  
+      </html>
+    </>
+  );
+}

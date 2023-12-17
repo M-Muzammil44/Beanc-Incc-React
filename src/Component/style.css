@@ -1,0 +1,335 @@
+
+body{
+
+    margin: 0;
+    padding: 0;
+    background-image: url('./projects-assets/background_cut.png'); 
+    background-repeat: repeat; 
+    background-position: left; 
+    height: 100%;
+
+}
+
+
+/*_____________________________________________________________________________________________ < Menu > __*/
+header {
+    background-image: url('./projects-assets/menu_bg.png'); 
+    background-size:cover;
+    padding-right: 30px; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: auto;
+    display:block;
+}
+
+
+.menu {
+   display:flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+.menu ul {
+    margin: -30px;
+    padding: 0;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    list-style: none;
+    text-align: center;
+    padding: 0; 
+}
+
+.menu li {
+    display: flex;
+    color:white;
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: italic;
+    /* padding: 5px 10px;  */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo{
+    font-style: italic; 
+    font-weight: bolder;
+    font-size:30pt;
+    position: relative;
+    top: -24px;
+    padding-right: 20px;
+    
+    
+}
+.menu-imgs{
+    padding-top: 30%;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    
+}
+
+.item-text {
+    position: absolute;
+    top: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: -110px;
+    color: white;
+}
+
+.menu img{
+    height: 50px;
+    width: 130px;
+}
+.menu a:hover {
+    color: rgba(255, 255, 255, 0.4); 
+}
+
+
+/*_________________________________________________________________________________ < Info box + figure > __*/
+.layout {
+    margin-bottom: -24px;
+    text-align: center;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    
+}
+.figure {
+    margin: 0 10px; 
+    vertical-align: middle; 
+}
+
+#info-box {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    vertical-align: middle;
+    background-image: url('./projects-assets/info_box_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+}
+
+#info-text1 {
+    margin-top: 35px;
+    font-size: 50px;
+    color: white;
+    font-family:'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#info-text2 {
+    margin-top: -40px;
+    font-size: 16px;
+    color: black;
+}
+
+.arrow {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor:pointer;
+    background-color: black;
+    
+}
+
+/*_________________________________________________________________________________ < Grid > __*/
+.gridd {
+    display : grid;
+    background-image: url('./projects-assets/background_cut.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    position: relative;
+    height :730px;
+    width: 975px;
+
+    
+
+    position: relative;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+
+    grid-template-columns: 229px 229px 229px 229px;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: 232px 232px 232px 232px;
+    grid-template-rows: repeat(4 1fr);
+    row-gap: 13px;
+    column-gap: 18px;
+
+    font-family:'Roboto BoldCondensed';
+    font-weight: 700;
+
+    margin-bottom: 30px;
+    
+}
+.images{
+    padding: 18px;
+    padding-left: 60px;
+}
+.item , .item3, .item8{
+    background-image: url('./projects-assets/items_bg.png');
+    background-size: 100% 100%;
+    
+}
+
+.item {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.item p{
+    margin: 50px;
+    padding: 10px; 
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    color: #70cbd2;
+    text-align: center;
+    justify-content: center;
+    
+}
+.item3{
+
+grid-column-start: 4;
+grid-row-start: 1;
+grid-column-end:  5;
+grid-row-end: 3;
+background-image: url('./projects-assets/touch.png');
+text-align: center;
+}
+.item3 p{
+    color: #70cbd2;
+    font-weight:bolder;
+    font-size: 18px;
+    padding-top: 09PX;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.item8{
+grid-column-start: 1;
+grid-row-start: 2;
+grid-column-end:  2;
+grid-row-end: 4;
+background-image: url('./projects-assets/about_us.png');
+}
+.item8 p{
+    color: #70cbd2;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 1px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+#aboutText{
+    color: #285268;
+    font-family: none;
+    text-shadow: none;
+}
+.readM img{
+    padding-left: 50px;
+    height: 40px;
+    width: 135px;
+}
+.readM p{
+    margin-top: -60px;
+    color: white;
+    font-size: 15px;
+}
+::placeholder{
+    color: black;
+}
+
+.submitM button {
+    background-image: url("./projects-assets/image.png");
+    background-position: center;
+    position:left;
+    background-size:auto;
+    padding: 10px 20px;
+    border: none;
+    color: white; 
+    background-color: transparent;
+  }
+
+footer {
+    background-image: url('./projects-assets/menu_bg.png'); 
+    background-repeat: no-repeat; 
+    background-position: center;
+    margin-top: 1%;
+    background-size: 10000px;
+    height:auto;
+    text-align: center;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    position:static;
+    
+}
+
+footer ul {
+    list-style: none;
+    display: flex; 
+    justify-content: space-between; /* Adjusted to create space between elements */
+    align-items:center; 
+    padding: 0; 
+}
+
+/* Style for the office number */
+
+
+footer p, footer a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 12pt; 
+    font-family: 'Roboto BoldCondensed';
+}
+
+.headoffice{
+    margin-right: 300px;
+    margin-left: 110px;
+}
+
+.container3{
+    max-width: 1200px;
+    
+    text-align: center;
+    margin: auto;
+}
+
+
+/* Additional styling for input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/*-----------------------------------------*/
+
+
+/* @media screen and (max-width: 480px){
+
+    body{
+       flex-direction: column;
+    }
+    .gridd, .item8,.item, .item3{
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+    }
+    footer{
+
+    }
+    
+ 
+} */

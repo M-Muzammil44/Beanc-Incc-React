@@ -2,25 +2,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function contact_us() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [data, setData] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      const result = await fetch('http://localhost:3001/tasks', {
+        method: "POST",
+        body: JSON.stringify({ name, email, data }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
-      if (response.ok) console.log('Form submitted successfully');
-      else console.error('Form submission failed');
+      const response = await result.json();
+      console.warn(response);
+      if (response) {
+        alert("Data saved successfully");
+        setEmail("");
+        setName("");
+        setData("");
+      }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error submitting the form:", error);
     }
   };
 
@@ -32,15 +38,15 @@ export default function contact_us() {
             <h1>Contact Us</h1>
           </header>
           <section>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleOnSubmit}>
               <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" required onChange={handleChange} />
+              <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)} />
 
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required onChange={handleChange} />
+              <input type="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
               <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required onChange={handleChange}></textarea>
+              <textarea placeholder="data" value={data} onChange={(e) => setData(e.target.value)} />
 
               <div className="button-group">
                 <button type="submit">Submit</button>
@@ -165,3 +171,6 @@ export default function contact_us() {
     </>
   );
 }
+
+
+export default ContactUs;

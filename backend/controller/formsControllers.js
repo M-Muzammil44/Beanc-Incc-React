@@ -1,16 +1,17 @@
 const Form = require('../models/database')
 const mongoose = require("mongoose")
+//file contains all the backend button for frontend
 
 //create a form
 const createForm = async (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, email, phone, message } = req.body;
 
     // Log received data
-    console.log('Received data:', { name, email, message });
+    console.log('Received data:', { name, email, phone,  message });
 
     try {
         // Attempt to create a new form
-        const form = await Form.create({ name, email, message });
+        const form = await Form.create({ name, email, phone,  message });
 
         // Log created form
         console.log('Form created:', form);
@@ -36,6 +37,7 @@ const getForms = async (req,res)=> {
 //get a single for
 const getForm = async (req,res)=> {
     const {id} = req.params
+    console.log('Received data:', id);
     if(!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error: 'No Such Form found'})
     }

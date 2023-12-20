@@ -14,9 +14,12 @@ app.use((req,res,next) => {
     next()
 })
 
-app.use('/api/forms',formsRoutes)
+app.use('/api/forms',formsRoutes) //first parameter can be anything including '/'
 
-// connect to db
+/*env file is created backend root. if you have download this project from github you won't see ".env" beacuse "." files aren't
+upload to github by default. example of .env is at bottom
+
+connect to db*/
 mongoose.connect(process.env.MONG_URL, {
     serverSelectionTimeoutMS: 30000, // Timeout in milliseconds
 })
@@ -28,4 +31,12 @@ mongoose.connect(process.env.MONG_URL, {
     })
     .catch((error) => {
         console.log(error);
-    });
+    })
+
+
+
+    /* .env 
+    PORT = xxxx
+    MONG_URL = connection string
+    */
+

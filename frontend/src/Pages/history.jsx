@@ -33,11 +33,11 @@ const History = () => {
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Form Submissions History</title>
+          <title>Submission History</title>
         </head>
         <body>
           <header>
-            <h1>Form Submissions History</h1>
+            <h1>Submission History</h1>
           </header>
 
           <div className="form-list">

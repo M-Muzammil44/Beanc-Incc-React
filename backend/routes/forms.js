@@ -13,13 +13,12 @@ router.get('/', getForms)
 //GET a single workout
 router.get('/:id', getForm)
 
-// POST a new workout
+// POST a new form
 router.post('/', createForm)    
 
     //Delete
 router.delete('/:id', deleteForm)
 
-    //Update
-router.patch('/:id', updateForm)
+
 
 module.exports = router

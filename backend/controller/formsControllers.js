@@ -64,27 +64,11 @@ const deleteForm = async (req,res)=> {
     res.status(200).json(form)
 }
 
-//update a form
-const updateForm = async (req,res)=> {
-    const {id} = req.params
-    if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error: 'No Such Form found'})
-    }
-    const form = await Form.findByIdAndUpdate({_id:id},{
-        ...req.body
-    })
-  
-    if (!form){
-        return res.status(404).json({error: 'No Such Form found'})
-    }
-    res.status(200).json(form)
-}
 
 
 module.exports ={
     createForm,
     getForms,
     getForm,
-    deleteForm,
-    updateForm
+    deleteForm
 }

@@ -18,7 +18,7 @@ export default function AboutUs() {
 
           <div className="container">
             <div className="about-section">
-              <imgage src={Team_Photo} alt="Team Photo" />
+              <img src={Team_Photo} alt="Team Photo" />
               <div className="about-content">
                 <h2>Our Team</h2>
                 <p>
